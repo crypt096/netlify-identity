@@ -20,7 +20,14 @@ export const AuthContextProvider = ({ children }) => {
     netlifyIdentity.open();
   };
 
-  return <AuthContext.Provider value={user}>{children}</AuthContext.Provider>;
+  const context = {
+    user,
+    login,
+  };
+
+  return (
+    <AuthContext.Provider value={context}>{children}</AuthContext.Provider>
+  );
 };
 
 export default AuthContext;
