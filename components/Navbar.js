@@ -9,8 +9,8 @@ export default function Navbar() {
   return (
     <div className="container">
       <nav>
-        <Image src="/rupee.png" width={50} height={48} />
-        <h1>Gaming Vibes</h1>
+        <Image src="/logo.png" width={45} height={48} />
+        <h1>WOLF Gaming Guides</h1>
         {authReady && (
           <ul>
             <li>
@@ -38,7 +38,7 @@ export default function Navbar() {
         )}
       </nav>
       <div className="banner">
-        <Image src="/banner.png" width={966} height={276} />
+        <Image src="/banner.jpg" width={966} height={276} />
       </div>
     </div>
   );
