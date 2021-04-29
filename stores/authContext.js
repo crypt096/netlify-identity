@@ -18,18 +18,15 @@ export const AuthContextProvider = ({ children }) => {
     netlifyIdentity.on("login", (user) => {
       setUser(user);
       netlifyIdentity.close();
-      console.log("Login event");
     });
 
     netlifyIdentity.on("logout", () => {
       setUser(null);
-      console.log("Logout event");
     });
 
     netlifyIdentity.on("init", (user) => {
       setAuthReady(true);
       setUser(user);
-      console.log("Init event");
     });
 
     // Init Netlify identity
